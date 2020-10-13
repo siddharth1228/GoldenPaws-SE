@@ -1,0 +1,87 @@
+<%-include ('header')  %>
+
+
+    
+
+
+
+<div id="dogsContainer" class="container mt-4">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="d-none d-md-block">
+          <div class="lead text-center text-capitalize">
+            <%= ngo.name %>
+          </div>
+
+          
+                  <div class="card shadow-sm mt-3">
+                    <div class="card-header">
+                      <i class="fas fa-phone"></i> Contact
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <%= ngo.phone %>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="card shadow-sm mt-3">
+                    <div class="card-header">
+                      <i class="fa fa-envelope" aria-hidden="true"></i> Email
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <%= ngo.email %>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card shadow-sm mt-3">
+                    <div class="card-header">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i> Location
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <%= ngo.location %>
+                      </li>
+                    </ul>
+                  </div>
+
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="card shadow-sm">
+          <img class="card-img-top" src="<%= ngo.image %>">
+          <div class="card-body">
+
+            <h5 class="card-title text-capitalize">
+            <%= ngo.name %>
+          </h5>
+            <p class="card-text">
+              <%= ngo.description %>
+                <div class="d-block d-sm-none d-none d-sm-block d-md-none">
+                  <hr>
+                  <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> Location</h5>
+                  <%= ngo.location %>
+                    <hr>
+                    
+
+                              
+                                    <h5 class="card-title"><i class="fas fa-phone"></i> Contact</h5>
+                                    <%= ngo.phone %>
+                </div>
+            </p>
+            <hr>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<%-include ('footer')  %>
