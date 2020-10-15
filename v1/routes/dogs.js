@@ -93,6 +93,10 @@ router.post("/dogs", middleware.isLoggedIn, upload.single("image"),function(req,
       var phone = req.body.phone;
       var description = req.body.description;
       var price = req.body.price;
+      if(price<0)
+      {
+        price=0;
+      }
       var location = req.body.location;
       var author = {
         id: req.user._id,
@@ -135,7 +139,7 @@ router.get("/dogs/:id", function(req, res) {
       if (err || !foundDog) {
         console.log(err);
         req.flash("error", "Sorry, that dog does not exist!");
-        return res.render("error");
+        return res.render("landing");
       }
       var ratingsArray = [];
 

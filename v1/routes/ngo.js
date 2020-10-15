@@ -54,10 +54,11 @@ router.post("/ngo", middleware.isLoggedIn, function(req, res){
     var email=req.body.email;
     var phone=req.body.phone;
     var description = req.body.description;
-    var location=req.body.loaction;
+    var location=req.body.location;
+    var mapUrl=req.body.mapUrl;
    
   
-      var newNgo = {name: name, image: image,email:email ,description: description,phone:phone,location:location};
+      var newNgo = {name: name, image: image,email:email ,description: description,phone:phone,location:location,mapUrl:mapUrl};
       // Create a new dog and save to DB
       Ngo.create(newNgo, function(err, newlyCreated){
           if(err){

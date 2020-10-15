@@ -6,6 +6,7 @@ var ngoSchema=new mongoose.Schema({
     email:String,
     location:String,
     description: String,
-    phone: String
+    phone: String,
+    mapUrl:String
 });
 module.exports=mongoose.model("Ngo",ngoSchema);
